@@ -1,3 +1,5 @@
+// Example of using create() method for inheritance. ECMAScript 5 compatible.
+
 var Person = {
       name: "Timur",
       age: 32,
