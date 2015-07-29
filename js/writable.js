@@ -14,10 +14,10 @@
         configurable: true
       }
     );
-    console.log(o.x);
+    console.log(o.x);		// Displays 1
     
     Object.defineProperty(o, "x", {writable: false});
     o.x = 2;
-    console.log(o.x);
+    console.log(o.x);		// Displays 1 or Errors out before with 'use strict'
   
 }());
