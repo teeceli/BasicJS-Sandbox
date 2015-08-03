@@ -16,11 +16,16 @@ console.log(employeeJson.employees[0].firstName);       // Prints "Timur"
 
 var text = '{"name":"John Johnson","street":"Oslo West 16","phone":"555 1234567"}';
             
-var employeeObject = JSON.parse(text);        // Would convert string to JSON object
+var textToObject = JSON.parse(text);        // Would convert string to JSON object
 
-console.log(employeeObject);                  // Prints object representation 
+console.log(textToObject);                  // Prints object representation 
 
-console.log(employeeObject.phone);            // Prints "555 1234567"
+console.log(textToObject.phone);            // Prints "555 1234567"
+
+// Example with poorly formatted JSON string (missing : between name parameter and value)
+var badText = '{"name" "John Johnson","street":"Oslo West 16","phone":"555 1234567"}';
+
+//var badTextToObject = JSON.parse(badText); 		// Throws error
             
 /* XML equivalent of JSON object above
 <employees>
