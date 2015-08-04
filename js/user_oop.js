@@ -1,5 +1,10 @@
 // Example of User class with assigned prototype methods
 function User(name, email){
+  
+  if (arguments.length != 2) {
+		throw new Error("function f called with " + arguments.length + "arguments, but it expects 2 arguments.");
+  }
+
   this.name = name;
   this.email = email;
   this.quizScores = [];
@@ -31,3 +36,5 @@ console.log(firstUser.showNameAndScore());       					// Prints "Timur Celikel S
 
 var secondUser = new User("John Doe", "john.doe@yahoo.com");
 console.log(secondUser.showNameAndScore());      					// Prints "John Doe Scores: No Scores Yet"
+
+var thirdUser = new User("Jane Doe");									// Throws bad number of arguments error
