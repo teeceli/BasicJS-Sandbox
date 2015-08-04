@@ -40,3 +40,33 @@ var badText = '{"name" "John Johnson","street":"Oslo West 16","phone":"555 12345
     </employee>
 </employees>
 */
+
+// -----------------------------------------------------------------------------
+// Example creating JSON string from JS object and parsing back to an object
+
+var carObject = {
+  parts : ["engine", "wheels", "seats", "radiator"], 
+  driver : "Timur", 
+  price : 23000
+};
+
+console.log(carObject);
+
+// Create a string out of JS object
+var carString = JSON.stringify(carObject);
+console.log(carString);
+
+// Create a JSON object by parsing JSON string
+var carJSON = JSON.parse(carString);
+console.log(carJSON);
+
+/* Note that JSON is limited in that it cannot store functions - the only values it 
+ can contain are:
+
+    objects (literals)
+    arrays
+    numbers
+    booleans
+    strings
+    nulls
+   */
